@@ -3,7 +3,6 @@
 import random
 
 def dibujaTabla(tabla):
-    # This function prints out the board that it was passed.
 
     # "Tabla" es una lista de 10 strings que representan la tabla.
     print('   |   |')
