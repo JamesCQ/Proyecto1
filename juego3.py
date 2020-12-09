@@ -1,1 +1,5 @@
-print("James")
+
+puntosdadosrojo = []
+puntosdadoamarillo = []
+puntosdadoazul = []
+puntosdadoverde = []
