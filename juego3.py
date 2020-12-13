@@ -1,5 +1,0 @@
-
-puntosdadosrojo = []
-puntosdadoamarillo = []
-puntosdadoazul = []
-puntosdadoverde = []
