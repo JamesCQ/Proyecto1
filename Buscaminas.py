@@ -19,8 +19,8 @@ def coloca_minas(tablero, minas, fil, col):
     minas_ocultas = []
     numero = 0
     while numero < minas:
-        y = random.randint(0fil-1)
-        x = random.randint(0fil-1)
+        y = random.randint(0,fil-1)
+        x = random.randint(0,fil-1)
         if tablero[y][x] != 12:
             tablero[y][x] = 12
             numero += 1
@@ -37,7 +37,8 @@ def coloca_pistas(talero,fil,col):
                                 if tablero[y+i][x+j]!= 9:
                                     tablero[y+i][x+j] += 1
         return tablero
-def rellenado(oculto, visible, x, fil, col, val):
+
+def rellenado(oculto, visible, y, x, fil, col, val):
     ceros = [(y,x)]
     while len(ceros) > 0:
         y, x = ceros.pop()
@@ -84,13 +85,13 @@ def menu ():
     return opcion
 
 columnas = 16
-Filas = 12
+filas = 12
 
 visible = crea_tablero(filas, columnas, "-")
 
 oculto = crea_tablero(filas, columnas, 0)
 
-oculto, minas_ocultas = colocadas_minas(oculto, 15, filas, columnas)
+oculto, minas_ocultas = coloca_minas(oculto, 15, filas, columnas)
 
 presentacion()
 
@@ -117,7 +118,7 @@ while jugando:
             y -= 1
             real = visible[y][x]
             visible[y][x] = "x"
-    elif mov == "s"
+    elif mov == "s":
         if y == filas-1:
             y == filas-1
         else:
@@ -146,14 +147,14 @@ while jugando:
             
             muestra_tablero(visible)
     elif mov == "b":
-        if real == "-"
+        if real == "-":
             visible[y][x] = "#"
             real = visible[y][x]
             if (y,x) not in minas_marcadas:
                 minas_marcadas.append((y,x))
     elif mov == "v":
-        if real == "#"
+        if real == "#":
             visible[y][x] = "-"
             real = visible[y][x]
-            if (y,x) not in minas_marcadas:
-                minas_marcadas.appen 
+            if (y,x) in minas_marcadas:
+                minas_marcadas.remove((y,x))
