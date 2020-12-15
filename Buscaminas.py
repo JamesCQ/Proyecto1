@@ -158,3 +158,29 @@ while jugando:
             real = visible[y][x]
             if (y,x) in minas_marcadas:
                 minas_marcadas.remove((y,x))
+    elif mov == "m" :
+        if oculto[y][x] == 9:
+            visible[y][x] = "@"
+            jugando = False
+        elif oculto[y][x] != 0:
+            visible[y][x] = oculto[y][x]
+            real = visible[y][x]
+        elif oculto[y][x] == 0:
+            visible[y][x] = 0
+            visible = rellenado (oculto, visible, y, x, filas, columnas, "-")
+            real = visible[y][x]
+        ganas = True
+
+        if tablero_completo(visible, filas, columnas, "-") and \
+            sorted(minas_ocultas) == sorted(minas_marcadas) and \
+            real != "-":
+            ganas = True
+            jugando = False
+        if not ganas:
+            print("***************************")
+            print("*********HAS PERDIDO*******")
+            print("***************************")
+        else:
+            print("***************************")
+            print("*********HAS GANADO********")
+            print("***************************")
