@@ -77,7 +77,7 @@ def presentacion():
     print("*                              *")  
     print("********************************")
     print()
-input("'enter' para empezar ...")
+    input("'enter' para empezar ...")
 
 def menu ():
     print()
@@ -118,6 +118,7 @@ while jugando:
             y -= 1
             real = visible[y][x]
             visible[y][x] = "x"
+
     elif mov == "s":
         if y == filas-1:
             y == filas-1
@@ -126,6 +127,7 @@ while jugando:
             y += 1
             real = visible[y][x]
             visible[y][x] = "x"
+
     elif mov == "a":
         if x == 0:
             x = 0
@@ -134,6 +136,7 @@ while jugando:
             x -= 1
             real = visible[y][x]
             visible[y][x] = "x"
+
     elif mov == "d":
         if x == columnas-1:
             x = columnas-1
@@ -143,44 +146,52 @@ while jugando:
             real = visible[y][x]
             visible[y][x] = "x"
             
-            os.system("cls")
+        os.system("cls")
             
-            muestra_tablero(visible)
+        muestra_tablero(visible)
+    
     elif mov == "b":
         if real == "-":
             visible[y][x] = "#"
             real = visible[y][x]
             if (y,x) not in minas_marcadas:
                 minas_marcadas.append((y,x))
+
     elif mov == "v":
         if real == "#":
             visible[y][x] = "-"
             real = visible[y][x]
             if (y,x) in minas_marcadas:
                 minas_marcadas.remove((y,x))
+
     elif mov == "m" :
         if oculto[y][x] == 9:
             visible[y][x] = "@"
             jugando = False
-        elif oculto[y][x] != 0:
+
+    elif oculto[y][x] != 0:
             visible[y][x] = oculto[y][x]
             real = visible[y][x]
-        elif oculto[y][x] == 0:
+    elif oculto[y][x] == 0:
             visible[y][x] = 0
             visible = rellenado (oculto, visible, y, x, filas, columnas, "-")
             real = visible[y][x]
-        ganas = True
+            os.system("cls")
 
-        if tablero_completo(visible, filas, columnas, "-") and \
+            muestra_tablero(visible)
+        
+    ganas = True
+
+    if tablero_completo(visible, filas, columnas, "-") and \
             sorted(minas_ocultas) == sorted(minas_marcadas) and \
             real != "-":
             ganas = True
             jugando = False
-        if not ganas:
+    if not ganas:
             print("***************************")
             print("*********HAS PERDIDO*******")
             print("***************************")
-        else:
+    else:
             print("***************************")
             print("*********HAS GANADO********")
             print("***************************")
