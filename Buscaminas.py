@@ -1,14 +1,13 @@
 import random
 import os 
-from pip._vendor.pyparsing import col
-def crea_tablero(fil,col,val):
-tablero = []
-for i in range(fila):
-    tablero.append([])
-    for j in range(columna):
-        tablero[i].append(valor)
-return tablero
 
+def crea_tablero(fil,col,val):
+    tablero = []
+    for i in range(fil):
+        tablero.append([])
+        for j in range(col):
+            tablero[i].append(val)
+    return tablero
 
 def muestra_tablero(tablero):
     for fila in tablero:
