@@ -27,7 +27,7 @@ def coloca_minas(tablero, minas, fil, col):
             minas_ocultas.append((y,x))
     return tablero, minas_ocultas
 
-def coloca_pistas(talero,fil,col):
+def coloca_pistas(tablero,fil,col):
         for y in range(fil):
             for x in range(col):
                 if tablero[y][x] == 9:
@@ -99,7 +99,7 @@ y = random.randint(2, filas-3)
 x = random.randint(2 , columnas-3)  
 
 real = visible[y][x]
-visibley[y][x] = "x"
+visible[y][x] = "x"
 
 os.system("cls")
 

@@ -1,15 +1,28 @@
 import random
 
 def tirada(listapuntos):
-    fic1 = 0
-    fic2 = 0
-    fic3 = 0
-    fic4 = 0
-    fichas = fic1+fic2+fic3+fic4
+    if fic1==76:
+        puntos+=1
+    elif fic2==76:
+        puntos+=1
+    elif fic3==76:
+        puntos+=1
+    elif fic4==76:
+        puntos+=1
 
+    dado1 = random.randrange(1,6)
+    dado2 = random.randrange(1,6)        
+    
 def partida():
-    while fichas!=19:
+    while puntos!=4:
+        print("")
+        print("~~~~~~~~~~~~~~~~~~~~")
         print("Tu turno equipo azul")
+        print("~~~~~~~~~~~~~~~~~~~~")
+        tirada()
+        if dado1
+
+
 
 def menu_parchis():
     salir=False
@@ -37,4 +50,10 @@ def menu_parchis():
         else:
             print("Introduce de nuevo, la opcion fue incorrecta: ")
             
+puntos = 0
+fic1 = 0
+fic2 = 0
+fic3 = 0
+fic4 = 0
+
 listapuntos=[]
