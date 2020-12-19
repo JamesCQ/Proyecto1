@@ -1,12 +1,7 @@
 import random
 
-def tiradadados(listapuntos):
-    puntos=dict()
-    dado1=random.randrange(1,6)
-    dado2=random.randrange(1,6)
-    puntos[0]=dado1
-    puntos[1]=dado2
-    listapuntos.append(puntos)
+def partida(listapuntos):
+    while
 
 def menu_parchis():
     salir=False

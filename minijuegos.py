@@ -10,6 +10,7 @@ def menu():
         print(" 2) Tres en raya")
         print(" 3) Parchís")
         print(" 4) Salir")
+        print(" 5) Creditos")
         opcion=int(input("¿Qué juego deseas jugar? "))
         if (opcion==1):
             print("1")
@@ -19,6 +20,10 @@ def menu():
             menu_parchis()
         elif (opcion==4):
             salir=True
+        elif (opcion==5):
+            print("James Adrian Cañarte Quintana")
+            print("Tamara Fernandez")
+            print("Alex Baskota")
         else:
             print("Introduce de nuevo, la opcion fue incorrecta: ")
 
