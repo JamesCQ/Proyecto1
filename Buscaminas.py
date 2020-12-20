@@ -180,14 +180,14 @@ while jugando:
 
             muestra_tablero(visible)
         
-    ganas = True
+    ganas = False
 
     if tablero_completo(visible, filas, columnas, "-") and \
             sorted(minas_ocultas) == sorted(minas_marcadas) and \
             real != "-":
-            ganas = True
-            jugando = False
-    if not ganas:
+        ganas = True
+        jugando = False
+    elif not ganas:
             print("***************************")
             print("*********HAS PERDIDO*******")
             print("***************************")
