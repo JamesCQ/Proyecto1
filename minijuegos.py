@@ -1,5 +1,6 @@
 from parchis import menu_parchis
 from juego_palillos import partida
+from laoca import menu_laoca
 import time
 
 def menu():
