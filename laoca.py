@@ -16,7 +16,7 @@ def presentacion():
 def instrucciones():
     os.system("cls")
     print("===================================")
-    print(" Habrán dos dados y se sumarán.    ")
+    print(" Habrá sólo un dado.               ")
     print(" Las casillas están representadas  ")
     print(" en números, así que cada casilla  ")
     print(" tiene un efecto diferente.        ")
