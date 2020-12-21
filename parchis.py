@@ -5,7 +5,15 @@ import time
 equipoazul = 0
 equiporojo = 0
 
-def partida():
+def presentacion():
+    os.system("cls")
+    print("===========================================")
+    print("= BIENVENIDO AL PARCHIS DE DOS JUGADORES! =")
+    print("= Habrán dos equipos, primero comienza el =")
+    print("=        equipo azul, luego el rojo       =")
+    print("===========================================")
+
+def partida(dado):
     jugando=True
     global equipoazul
     global equiporojo
@@ -77,14 +85,10 @@ def instrucciones():
     input("Pulsa Enter para volver al menú...")
 
 def menu_parchis():
+
     salir=False
     while salir==False:
-        os.system("cls")
-        print("===========================================")
-        print("= BIENVENIDO AL PARCHIS DE DOS JUGADORES! =")
-        print("= Habrán dos equipos, primero comienza el =")
-        print("=        equipo azul, luego el rojo       =")
-        print("===========================================")
+        presentacion()
         print(" 1) Empezar partida")
         print(" 2) Instrucciones")
         print(" 3) Volver al menú de juegos")
@@ -105,3 +109,5 @@ def menu_parchis():
             print("===========================================")
         else:
             print("Introduce de nuevo, la opcion fue incorrecta: ")
+
+menu_parchis()
