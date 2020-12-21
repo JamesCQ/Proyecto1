@@ -1,4 +1,6 @@
 from parchis import menu_parchis
+from juego_palillos import partida
+import time
 
 def menu():
     salir=False
@@ -15,16 +17,19 @@ def menu():
         if (opcion==1):
             print("1")
         elif (opcion==2):
-            print("2")
+            partida()
         elif (opcion==3):
             menu_parchis()
         elif (opcion==4):
             salir=True
         elif (opcion==5):
-            print("James Adrian Cañarte Quintana")
-            print("Tamara Fernandez")
-            print("Alex Baskota")
+            print("*************************************")
+            print("*            James Cañarte          *")
+            print("*          Tamara Fernandez         *")
+            print("*            Alex Baskota           *")
+            print("*************************************")
+            time.sleep(3)
         else:
-            print("Introduce de nuevo, la opcion fue incorrecta: ")
+            print("")
 
 menu()

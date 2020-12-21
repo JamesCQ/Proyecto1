@@ -175,43 +175,48 @@ def mostrar_ganador(turno):
 
 
 
+def partida():
+    turno = 1 
 
-
-
-########## Program principal ############
-
-turno = 1 
-
-palillos, quitas = sorteo_opciones()
-
-os.system("clear")
-nivel = presentacion()
-
-os.system("clear")
-instrucciones(palillos, quitas)
-
-jugando = True
-
-while jugando:
+    palillos, quitas = sorteo_opciones()
 
     os.system("clear")
-    area(palillos, quitas)
+    nivel = presentacion()
 
-    if turno == 1:
-        jugada = movimientoJugador(palillos, quitas)
-        turno = 2
-    elif turno == 2:
-        print("   El ordenador está pensando ...")
-        time.sleep(2)
-        if nivel == "1":
-            jugada = movimiento_Ordenador_aleatorio(palillos, quitas)
-        elif nivel == "2":
-            jugada = movimiento_Ordenador_aleatorio(palillos, quitas)
-        turno = 1
+    os.system("clear")
+    instrucciones(palillos, quitas)
 
-    palillos -= jugada
+    jugando = True
 
-    if palillos == 0:
+    while jugando:
+
         os.system("clear")
-        mostrar_ganador(turno)
-        jugando = False
+        area(palillos, quitas)
+
+        if turno == 1:
+            jugada = movimientoJugador(palillos, quitas)
+            turno = 2
+        elif turno == 2:
+            print("   El ordenador está pensando ...")
+            time.sleep(2)
+            if nivel == "1":
+                jugada = movimiento_Ordenador_aleatorio(palillos, quitas)
+            elif nivel == "2":
+                jugada = movimiento_Ordenador_aleatorio(palillos, quitas)
+            turno = 1
+
+        palillos -= jugada
+
+        if palillos == 0:
+            os.system("clear")
+            mostrar_ganador(turno)
+            print("Quieres volver al menú minijuegos o volver a comenzar nueva partida?: ")
+            print(" 1) Volver al menú")
+            print(" 2) Nueva partida")
+            opcion = int(input(": "))
+            if opcion==1:
+                jugando = False
+            elif opcion==2:
+                partida()
+            else:
+                print("")
