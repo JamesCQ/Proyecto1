@@ -31,8 +31,6 @@ def presentacion():
         nivel = input("  Elige nivel (1/2): ")
     return nivel
 
-
-
 def instrucciones(palillos, quitas):
 
     print()
@@ -50,7 +48,6 @@ def instrucciones(palillos, quitas):
     print()
     input(" Pulsa Enter para empezar ...")
 
-
 def sorteo_opciones():
 
     '''Devuelve dos valores aleatorios: Número de palillos totsles
@@ -60,8 +57,6 @@ def sorteo_opciones():
     quitas = random.randint(3,5)
 
     return palillos, quitas
-
-
 
 def area(palillos, quitas):
 
@@ -83,8 +78,6 @@ def area(palillos, quitas):
     print()
     print()
     print()
-
-
 
 def movimientoJugador(palillos, quitas):
 
@@ -108,7 +101,6 @@ def movimientoJugador(palillos, quitas):
         palillos_quitar = int(q)
 
     return palillos_quitar
-
 
 def movimiento_Ordenador_aleatorio(palillos, quitas):
 
@@ -147,7 +139,6 @@ def movimiento_Ordenador_ia(palillos, quitas):
 
     return palillos_quitar
 
-
 def mostrar_ganador(turno):
 
     "Muestra una pantalla final con el ganador de la partida"
@@ -172,8 +163,6 @@ def mostrar_ganador(turno):
     print()
     print()
     print()
-
-
 
 def partida():
     turno = 1 
