@@ -16,7 +16,7 @@ def menu():
         print(" 5) Creditos")
         opcion=int(input("¿Qué juego deseas jugar? "))
         if (opcion==1):
-            print("1")
+            menu_laoca()
         elif (opcion==2):
             partida()
         elif (opcion==3):
