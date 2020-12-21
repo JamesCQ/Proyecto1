@@ -1,33 +1,31 @@
 import random
+import os
 
-<<<<<<< HEAD
-def partida(listapuntos):
-    while
-=======
-def tirada(listapuntos):
-    if fic1==76:
-        puntos+=1
-    elif fic2==76:
-        puntos+=1
-    elif fic3==76:
-        puntos+=1
-    elif fic4==76:
-        puntos+=1
+def tirada():
+    dado = random.randint(1,6)
 
-    dado1 = random.randrange(1,6)
-    dado2 = random.randrange(1,6)        
+    return dado
+
+def puntos(listapuntos,dado):
+
     
+
 def partida():
-    while puntos!=4:
+    turnoazul=True
+    jugando=True
+    while jugando:
+        os.system("clear")
         print("")
         print("~~~~~~~~~~~~~~~~~~~~")
         print("Tu turno equipo azul")
         print("~~~~~~~~~~~~~~~~~~~~")
-        tirada()
-        if dado1
+        input(" Pulsa Enter para tirar de dado ...")
 
-
->>>>>>> a138ea47d3f005a50be2ae0645fbc971fdc238c6
+def instrucciones()
+    print("")
+    print("===========================================")
+    print("=El primero que llegue a los 72 puntos sin=")
+    print("=         pasarse, gana. Suerte :)        =")
 
 def menu_parchis():
     salir=False
@@ -38,6 +36,7 @@ def menu_parchis():
         print("=        equipo azul, luego el rojo       =")
         print("===========================================")
         print(" 1) Empezar partida")
+        print(" 2) Instrucciones")
         print(" 2) Volver al menú de juegos")
         print(" 3) Creditos")
         print("===========================================")
@@ -54,11 +53,5 @@ def menu_parchis():
             print("===========================================")
         else:
             print("Introduce de nuevo, la opcion fue incorrecta: ")
-            
-puntos = 0
-fic1 = 0
-fic2 = 0
-fic3 = 0
-fic4 = 0
 
 listapuntos=[]

@@ -7,7 +7,7 @@ def menu():
         print("=    MENÚ MINIJUEGOS    =")
         print("=========================")
         print(" 1) La oca")
-        print(" 2) Tres en raya")
+        print(" 2) Juego de los palillos")
         print(" 3) Parchís")
         print(" 4) Salir")
         print(" 5) Creditos")
